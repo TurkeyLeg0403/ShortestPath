@@ -17,12 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDl-ze-ac0">
+                                <rect key="frame" x="0.0" y="81" width="375" height="528"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please touches!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCA-OR-EEU">
+                                <rect key="frame" x="0.0" y="44" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-h5-IcG">
+                                <rect key="frame" x="130" y="617" width="114" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="runBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljd-nx-6Xl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="top" secondItem="KCA-OR-EEU" secondAttribute="bottom" constant="16" id="5Fh-8q-4QS"/>
+                            <constraint firstItem="DzC-h5-IcG" firstAttribute="top" secondItem="xDl-ze-ac0" secondAttribute="bottom" constant="8" symbolic="YES" id="8PQ-hx-kYr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KCA-OR-EEU" secondAttribute="trailing" id="AOk-PD-kN5"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E2u-b9-iSe"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="81" id="Hu5-v0-plW"/>
+                            <constraint firstAttribute="bottom" secondItem="xDl-ze-ac0" secondAttribute="bottom" constant="58" id="Mpl-1S-W2U"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="KCA-OR-EEU" secondAttribute="centerX" id="Wjc-so-tDc"/>
+                            <constraint firstItem="KCA-OR-EEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cDQ-DY-ENX"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="DzC-h5-IcG" secondAttribute="centerX" id="duh-B4-daH"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eB9-EU-aRm"/>
+                            <constraint firstItem="xDl-ze-ac0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h9S-7j-Qxq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pathView" destination="xDl-ze-ac0" id="oCk-Wa-ShE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

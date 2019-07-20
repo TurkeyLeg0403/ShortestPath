@@ -14,6 +14,7 @@
 		00F529B022E2FC9400DD9A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F529AE22E2FC9400DD9A5B /* LaunchScreen.storyboard */; };
 		00F529BB22E2FC9400DD9A5B /* ShortestPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F529BA22E2FC9400DD9A5B /* ShortestPathTests.swift */; };
 		00F529C622E2FC9400DD9A5B /* ShortestPathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F529C522E2FC9400DD9A5B /* ShortestPathUITests.swift */; };
+		00F529D522E316C600DD9A5B /* TravelingSalesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F529D422E316C600DD9A5B /* TravelingSalesman.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		00F529C122E2FC9400DD9A5B /* ShortestPathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortestPathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F529C522E2FC9400DD9A5B /* ShortestPathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortestPathUITests.swift; sourceTree = "<group>"; };
 		00F529C722E2FC9400DD9A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F529D422E316C600DD9A5B /* TravelingSalesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelingSalesman.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				00F529AC22E2FC9400DD9A5B /* Assets.xcassets */,
 				00F529AE22E2FC9400DD9A5B /* LaunchScreen.storyboard */,
 				00F529B122E2FC9400DD9A5B /* Info.plist */,
+				00F529D422E316C600DD9A5B /* TravelingSalesman.swift */,
 			);
 			path = ShortestPath;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F529A822E2FC9300DD9A5B /* ViewController.swift in Sources */,
+				00F529D522E316C600DD9A5B /* TravelingSalesman.swift in Sources */,
 				00F529A622E2FC9300DD9A5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
