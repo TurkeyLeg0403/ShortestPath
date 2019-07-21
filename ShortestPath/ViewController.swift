@@ -45,17 +45,21 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    @IBAction func runBtn(_ sender: Any) {
-        let travelingSalesman: TravelingSalesman = TravelingSalesman(points: self.points);
-        let resultPaths = travelingSalesman.execute();
+    func drawPathLines(resultPaths: [CGPoint] ) {
+        self.view.viewWithTag(999)?.removeFromSuperview();
         let draw2D: Draw2D = Draw2D(frame: pathView.frame);
+        draw2D.tag = 999;
         draw2D.isOpaque = false;
         draw2D.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0);
         draw2D.getResultPaths(resultPaths: resultPaths);
         print(draw2D.frame);
         self.view.addSubview(draw2D);
+    }
+    
+    @IBAction func runBtn(_ sender: Any) {
+        let travelingSalesman: TravelingSalesman = TravelingSalesman(points: self.points);
+        let resultPaths = travelingSalesman.execute();
+        self.drawPathLines(resultPaths: resultPaths);
     }
     
 }
@@ -76,7 +80,9 @@ class Draw2D: UIView {
         let color = CGColor(colorSpace: colorSpace, components: components)
         context?.setStrokeColor(color!)
         context?.move(to: resultPaths[0]);
-        context?.addLine(to: resultPaths[1]);
+        for i in 1..<resultPaths.count {
+            context?.addLine(to: resultPaths[i]);
+        }
         context?.strokePath()
     }
 }
