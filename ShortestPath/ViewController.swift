@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var pathView: UIView!
+    var points: [CGPoint] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +40,43 @@ class ViewController: UIViewController {
         for touch in touches {
             let location = touch.location(in: pathView)
             self.putPoint(location: location )
+            self.points.append(location);
             Swift.print(location)
         }
     }
     
+    
+    
     @IBAction func runBtn(_ sender: Any) {
+        let travelingSalesman: TravelingSalesman = TravelingSalesman(points: self.points);
+        let resultPaths = travelingSalesman.execute();
+        let draw2D: Draw2D = Draw2D(frame: pathView.frame);
+        draw2D.isOpaque = false;
+        draw2D.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0);
+        draw2D.getResultPaths(resultPaths: resultPaths);
+        print(draw2D.frame);
+        self.view.addSubview(draw2D);
     }
     
 }
 
+class Draw2D: UIView {
+    
+    private var resultPaths: [CGPoint] = [];
+    
+    func getResultPaths(resultPaths: [CGPoint] ) {
+        self.resultPaths = resultPaths;
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        context?.setLineWidth(2.0)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let components: [CGFloat] = [0.0, 0.0, 1.0, 1.0]
+        let color = CGColor(colorSpace: colorSpace, components: components)
+        context?.setStrokeColor(color!)
+        context?.move(to: resultPaths[0]);
+        context?.addLine(to: resultPaths[1]);
+        context?.strokePath()
+    }
+}
