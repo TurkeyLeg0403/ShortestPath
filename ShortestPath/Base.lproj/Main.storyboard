@@ -28,8 +28,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-h5-IcG">
-                                <rect key="frame" x="130" y="617" width="114" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-h5-IcG">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.8980392157" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Run"/>
                                 <connections>
                                     <action selector="runBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljd-nx-6Xl"/>
@@ -41,19 +42,23 @@
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="top" secondItem="KCA-OR-EEU" secondAttribute="bottom" constant="16" id="5Fh-8q-4QS"/>
                             <constraint firstItem="DzC-h5-IcG" firstAttribute="top" secondItem="xDl-ze-ac0" secondAttribute="bottom" constant="8" symbolic="YES" id="8PQ-hx-kYr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KCA-OR-EEU" secondAttribute="trailing" id="AOk-PD-kN5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DzC-h5-IcG" secondAttribute="trailing" id="Czf-Na-sAV"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E2u-b9-iSe"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="81" id="Hu5-v0-plW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DzC-h5-IcG" secondAttribute="bottom" id="Jrc-B4-rHt"/>
                             <constraint firstAttribute="bottom" secondItem="xDl-ze-ac0" secondAttribute="bottom" constant="58" id="Mpl-1S-W2U"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="KCA-OR-EEU" secondAttribute="centerX" id="Wjc-so-tDc"/>
                             <constraint firstItem="KCA-OR-EEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cDQ-DY-ENX"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="DzC-h5-IcG" secondAttribute="centerX" id="duh-B4-daH"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eB9-EU-aRm"/>
                             <constraint firstItem="xDl-ze-ac0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h9S-7j-Qxq"/>
+                            <constraint firstItem="DzC-h5-IcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uDv-pz-Epb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="pathView" destination="xDl-ze-ac0" id="oCk-Wa-ShE"/>
+                        <outlet property="runBtn" destination="DzC-h5-IcG" id="8BI-hC-CuL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
